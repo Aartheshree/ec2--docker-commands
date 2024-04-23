@@ -1,0 +1,36 @@
+sudo apt update -y [to update the ec2 console]
+sudo apt install docker.io [to install the docker]
+docker -v [to check the version of the docker]
+docker version [ to know about the complete package of docker version]
+docker search nginx [this will find all the nginx docker imagesfrom dockerhub and  display ]
+docker pull nginx [to pull nginx from the docker hub]
+docker images- to viw the pulled image
+docker ps -[ to view running image]
+docker run -d -p 80:80 nginx [ to run a docker image]
+docker network ls [to check the network where we are running now]
+docker stop container id [to stop the container]
+docker build -t name:tag [ to create our own docker image]
+
+
+to push your own image
+1st create a repository in your dockerhub
+docker login
+docker tag oldername new reponame:tag
+docker push new repo name: tag
+ 
+volumes
+docker volume create my-vol [ to create volume 
+docker volume ls [to list volumes]
+docker volume inspect my-vol
+[
+    {
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/my-vol/_data",
+        "Name": "my-vol",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+
+docker volume rm my-vol [to remove volume]
